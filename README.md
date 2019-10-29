@@ -153,7 +153,7 @@ However **do not** put a line break in the field, as this hinders the tracking o
 #### Article
     @Article {,
         title        = {},
-    	author       = ,
+        author       = ,
         journal      = ,
         series       = ,
         volume       = {},
