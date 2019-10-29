@@ -118,6 +118,7 @@ Around the character ```=``` no spaces are used (see templates).
 Bibtex entries should be as complete and correct as possible.  
 The templates show the necessary information that needs to be included in every entry.  
 If some fields are not applicable (e.g. a journal is not part of a series), then leave the field empty (e.g. ```series={}```).
+New entries should be added at the end of the file.
 
 ### Notes
 
@@ -140,41 +141,48 @@ This affects ```title``` fields of @Book entries, ```booktitle``` fields of @InC
 The booktitle for proceedings (as defined in proceedings.bib) should be as written on the published proceedings.
 If the title of the proceedings does not contain a reference to the conference, you can add the abbreviated name and year of the conference (prepended by a comma, e.g. ```, ANTS2018```).
 
+Conferences usually come with proceedings (those should be referenced from the proceedings.bib file).
+Sometimes the conferences however also produce extended versions or post-proceedings in special issues of a journal.
+In that case the entry should be referenced from the file journal.bib.
+
+Sometimes titles or the list of authors can be long.
+However **do not** put a line break in the field, as this hinders the tracking of changes that git can automatically do.
+
 ## Templates
 
 #### Article
     @Article {,
-        title={},
-        author=,
-        journal=,
-        series=,
-        volume={},
-        number={},
-        year={},
-        pages={},
-        doi={},
-        note={},
-        annote={},
+        title        = {},
+    	author       = ,
+        journal      = ,
+        series       = ,
+        volume       = {},
+        number       = {},
+        year         = {},
+        pages        = {},
+        doi          = {},
+        note         = {},
+        annote       = {},
     }
 For the ```author``` field use the keys from author.bib. <br>
 For the ```series``` field use the keys from series.bib. <br>
 
 #### InProceedings
     @InProceedings {,
-        title={},
-        author=,
-        booktitle=,
-        editor=,
-        series=,
-        volume={},
-        number={},
-        year={},
-        pages={},
-        publisher=,
-        address=,
-        doi={},
-        note={},
-        annote={},
+        title        = {},
+        author       = ,
+        booktitle    = ,
+        editor       = ,
+        series       = ,
+        volume       = {},
+        number       = {},
+        year         = {},
+        pages        = {},
+        publisher    = ,
+        address      = ,
+        doi          = {},
+        note         = {},
+        annote       = {},
     }
 For the ```booktitle``` field, use the keys from proceedings.bib. <br>
 For the ```author``` field and ```editor``` field use the keys from author.bib. <br>
@@ -184,20 +192,20 @@ For the ```address``` field use the keys from address.bib. <br>
 
 #### InCollections
     @InCollections {,
-        title={},
-        author=,
-        booktitle={},
-        editor=,
-        series=,
-        volume={},
-        number={},
-        year={},
-        pages={},
-        publisher=,
-        address=,
-        doi={},
-        note={},
-        annote={},
+        title        = {},
+        author       = ,
+        booktitle    = {},
+        editor       = ,
+        series       = ,
+        volume       = {},
+        number       = {},
+        year         = {},
+        pages        = {},
+        publisher    = ,
+        address      = ,
+        doi          = {},
+        note         = {},
+        annote       = {},
     }
 For the ```author``` field and ```editor``` field use the keys from author.bib. <br>
 For the ```series``` field use the keys from series.bib. <br>
@@ -206,14 +214,14 @@ For the ```address``` field use the keys from address.bib. <br>
 
 #### Book
     @Book {,
-        title={},
-        editor/author=,
-        publisher=,
-        address=,
-        year={},
-        doi={},
-        note={},
-        annote={},
+        title        = {},
+        editor/author= ,
+        publisher    = ,
+        address      = ,
+        year         = {},
+        doi          = {},
+        note         = {},
+        annote       = {},
     }
 Choose either author (single author of the book or the same set of authors throughout the book) or editor field (otherwise).
 For the ```author``` field and ```editor``` field use the keys from author.bib. <br>
@@ -222,13 +230,13 @@ For the ```address``` field use the keys from address.bib. <br>
 
 #### PhDThesis
     @PhDThesis {,
-        title={},
-        author=,
-        school=,
-        address=,
-        year={},
-        note={},
-        annote={},
+        title        = {},
+        author       = ,
+        school       = ,
+        address      = ,
+        year         = {},
+        note         = {},
+        annote       = {},
     }
 For the ```author``` field use the keys from author.bib. <br>
 For the ```school``` field use the keys from institution.bib. <br>
@@ -236,13 +244,13 @@ For the ```address``` field use the keys from address.bib. <br>
 
 #### MastersThesis
     @MastersThesis {,
-        title={},
-        author=,
-        school=,
-        address=,
-        year={},
-        note={},
-        annote={},
+        title        = {},
+        author       = ,
+        school       = ,
+        address      = ,
+        year         = {},
+        note         = {},
+        annote       = {},
     }
 For the ```author``` field use the keys from author.bib. <br>
 For the ```school``` field use the keys from institution.bib. <br>
@@ -250,13 +258,13 @@ For the ```address``` field use the keys from address.bib. <br>
 
 #### TechReport
     @TechReport {,
-        title={},
-        author=,
-        institution=,
-        address=,
-        number={},
-        note={},
-        annote={},
+        title        = {},
+        author       = ,
+        institution  = ,
+        address      = ,
+        number       = {},
+        note         = {},
+        annote       = {},
     }
 For the ```author``` field use the keys from author.bib. <br>
 For the ```institution``` field use the keys from institution.bib. <br>
@@ -264,13 +272,13 @@ For the ```address``` field use the keys from address.bib. <br>
 
 #### Misc
     @Misc {,
-        key={},
-        title={},
-        author=,
-        howpublished={},
-        year={},
-        note={},
-        annote={},
+        key          = {},
+        title        = {},
+        author       = ,
+        howpublished = {},
+        year         = {},
+        note         = {},
+        annote       = {},
     }
 For the ```author``` field use the keys from author.bib. <br>
 For the ```school``` field use the keys from institution.bib. <br>
