@@ -1,5 +1,6 @@
 % Encoding: UTF-8
 
+@comment{Misc in README has a wrong field description}
 @Article {SchLotLut-etal2015ITIT,
     title        = {Model-driven software systems engineering in robotics: covering the complete life-cycle of a robot},
     author       = {Schlegel, Christian and Lotz, Alex and Lutz, Matthias and Stampfer, Dennis and Ingl{\'e}s-Romero, Juan F and Vicente-Chicote, Cristina},
@@ -73,11 +74,16 @@
     annote       = {},
 }
 
-@Misc{KucLigBozBir2018ants-supp,
-    title={Behavior trees as a control architecture in the automatic design of robot swarms: Supplementary material},
-    author={Kuckling, J. and Ligot, A. and Bozhinoski, D. and Birattari, M.},
-    howpublished={\url{http://iridia.ulb.ac.be/supp/IridiaSupp2018-004/index.html}},
-    year={2018},
+@comment{What does key refer to?}
+@comment{Do we accept \url? if so, create a rule for this. howpublished: online, url: www...? Check all Misc}
+@Misc {KucLigBozBir2018ants-supp,
+    key          = {},
+    title        = {Behavior trees as a control architecture in the automatic design of robot swarms: Supplementary material},
+    author       = {Kuckling, J. and Ligot, A. and Bozhinoski, D. and Birattari, M.},
+    howpublished = {\url{http://iridia.ulb.ac.be/supp/IridiaSupp2018-004/index.html}},
+    year         = {2018},
+    note         = {},
+    annote       = {},
 }
 
 @comment{Missing year in TechReport? If not stated differently, the year is as it is in the key}
@@ -723,8 +729,9 @@
     annote       = {},
 }
 
+@comment{This does not fit very well with Misc. Check what type of entry does fit better.}
 @Manual{R,
-    title={{R}: A Language and Environment for Statistical Computing},
+    title={},
     author={{R Development Core Team}},
     organization={R Foundation for Statistical Computing},
     address={Vienna, Austria},
@@ -1075,17 +1082,6 @@
     annote       = {},
 }
 
-@InProceedings{,
-    author={},
-    title={},
-    booktitle=,
-    year={},
-    editor={},
-    pages={},
-    address={},
-    publisher={},
-}
-
 @InProceedings {HuGonHanSei2015icra,
     title        = {Semi-autonomous simulated brain tumor ablation with {RavenII} surgical robot using behavior tree},
     author       = {Hu, Danying and Gong, Yuanzheng and Hannaford, Blake and Seibel, Eric J},
@@ -1120,11 +1116,15 @@
     annote       = {},
 }
 
-@Misc{Cha2007misc,
-    author={Champandard, Alex J.},
-    title={Understanding Behavior Trees},
-    howpublished={\url{http://aigamedev.com/open/articles/bt-overview/}},
-    year={2007},
+@comment{Replaced Cha2007misc, misc is not a meaningful and descriptive identifier}
+@Misc {Cha2007aigamedev,
+    key          = {},
+    title        = {Understanding Behavior Trees},
+    author       = {Champandard, Alex J.},
+    howpublished = {\url{http://aigamedev.com/open/articles/bt-overview/}},
+    year         = {2007},
+    note         = {},
+    annote       = {},
 }
 
 @InProceedings {TriGroLab-etal2003ecal,
@@ -1424,19 +1424,26 @@
     annote       = {},
 }
 
-@Misc{HasRobBir2018ants-supp,
-    author={Ken Hasselmann and Fr\'ed\'eric Robert and Mauro Birattari},
-    title={Automatic design of communication-based behaviors for robot swarms: Supplementary material},
-    howpublished={\par http://iridia.ulb.ac.be/supp/IridiaSupp2018-003/},
-    year={2018},
+@comment{Do we accept \par?}
+@Misc {HasRobBir2018ants-supp,
+    key          = {},
+    title        = {Automatic design of communication-based behaviors for robot swarms: Supplementary material},
+    author       = {Ken Hasselmann and Fr\'ed\'eric Robert and Mauro Birattari},
+    howpublished = {\par http://iridia.ulb.ac.be/supp/IridiaSupp2018-003/},
+    year         = {2018},
+    note         = {},
+    annote       = {},
 }
 
 @comment{This is the reference to the journal paper. Update as soon as it is published}
-@Misc{HasBir2019supp,
-    author={Ken Hasselmann and Mauro Birattari},
-    title={Modular automatic design of collective behaviors for robots endowed with local communication capabilities: Supplementary material},
-    howpublished={\par http://iridia.ulb.ac.be/supp/IridiaSupp2019-005/},
-    year={2019},
+@Misc {HasBir2019supp,
+    key          = {},
+    title        = {Modular automatic design of collective behaviors for robots endowed with local communication capabilities: Supplementary material},
+    author       = {Ken Hasselmann and Mauro Birattari},
+    howpublished = {\par http://iridia.ulb.ac.be/supp/IridiaSupp2019-005/},
+    year         = {2019},
+    note         = {},
+    annote       = {},
 }
 
 @Article {SpeSpeHamHei2004AR,
@@ -1487,12 +1494,16 @@
     annote       = {},
 }
 
-@Misc{ChaDawHer2010gdc,
-    author={Champandard, Alex J and Dawe, Michael and Hernandez-Cerpa, David},
-    title={Behavior trees: Three ways of cultivating game {AI}},
-    howpublished={\url{https://www.gdcvault.com/play/1012744/Behavior-Trees-Three-Ways-of}},
-    year={2010},
-    booktitle={Game Developers Conference, AI Summit},
+@comment{Do we accept \url?}
+@comment{Game Developers Conference, AI Summit, originally in booktitle}
+@Misc {ChaDawHer2010gdc,
+    key          = {},
+    title        = {Behavior trees: Three ways of cultivating game {AI}},
+    author       = {Champandard, Alex J and Dawe, Michael and Hernandez-Cerpa, David},
+    howpublished = {\url{https://www.gdcvault.com/play/1012744/Behavior-Trees-Three-Ways-of}},
+    year         = {2010},
+    note         = {Game Developers Conference, AI Summit},
+    annote       = {},
 }
 
 @InProceedings {ChrDor2006alife,
@@ -1701,11 +1712,14 @@
     annote       = {},
 }
 
-@Misc{LigKucBozBir2018supp,
-    title={{AutoMoDe-Maple}: Automatic modular design of robot swarms using behavior trees as a control architecture: Supplementary material},
-    author={Ligot, A. and Kuckling, J. and Bozhinoski, D. and Birattari, M.},
-    howpublished={\url{http://iridia.ulb.ac.be/supp/IridiaSupp2018-006/index.html}},
-    year={2018},
+@Misc {LigKucBozBir2018supp,
+    key          = {},
+    title        = {{AutoMoDe-Maple}: Automatic modular design of robot swarms using behavior trees as a control architecture: Supplementary material},
+    author       = {Ligot, A. and Kuckling, J. and Bozhinoski, D. and Birattari, M.},
+    howpublished = {\url{http://iridia.ulb.ac.be/supp/IridiaSupp2018-006/index.html}},
+    year         = {2018},
+    note         = {},
+    annote       = {},
 }
 
 @InProceedings {KucLigBozBir2018ants,
@@ -1946,12 +1960,14 @@
     annote       = {},
 }
 
-@Misc{SalLigBir2019supp,
-    author={Salman, Muhammad and Ligot, Antoine and Birattari, Mauro},
-    title={Concurrent design of control software and configuration of the hardware for a robot swarm: Supplementary material},
-    howpublished={\par
-    http://iridia.ulb.ac.be/supp/IridiaSupp2019-001/},
-    year={2019},
+@Misc {SalLigBir2019supp,
+    key          = {},
+    title        = {Concurrent design of control software and configuration of the hardware for a robot swarm: Supplementary material},
+    author       = {Salman, Muhammad and Ligot, Antoine and Birattari, Mauro},
+    howpublished = {\par http://iridia.ulb.ac.be/supp/IridiaSupp2019-001/},
+    year         = {2019},
+    note         = {},
+    annote       = {},
 }
 
 @Book {GenPot2019book,
@@ -2199,19 +2215,6 @@
     doi          = {},
     note         = {},
     annote       = {},
-}
-
-@InProceedings{,
-    author={},
-    year={},
-    month={07},
-    pages={},
-    title={},
-    isbn={0-7803-8916-6},
-    booktitle={},
-    doi={},
-    publisher={},
-    address={},
 }
 
 @InProceedings {PugMarZha2005sis,
@@ -2558,12 +2561,14 @@
     annote       = {},
 }
 
-@PhdThesis{Jak1998phd,
-    author={Jakobi, N.},
-    title={Minimal simulations for evolutionary robotics},
-    school={University of Sussex},
-    year={1998},
-    address={Falmer, UK},
+@PhDThesis {Jak1998phd,
+    title        = {Minimal simulations for evolutionary robotics},
+    author       = {Jakobi, N.},
+    school       = {University of Sussex},
+    address      = {Falmer, UK},
+    year         = {1998},
+    note         = {},
+    annote       = {},
 }
 
 @InProceedings {BonLip2004ssls,
@@ -2888,11 +2893,15 @@
     annote       = {},
 }
 
-@Misc{CarPin2019arxiv,
-    author={Carlone, Luca and Pinciroli, Carlo},
-    title={Robot Co-design: Beyond the Monotone Case},
-    url={https://arxiv.org/abs/1902.05880v1},
-    year={2019}
+@comment{https://arxiv.org/abs/1902.05880v1, originally as url: https://arxiv.org/abs/1902.05880v1}
+@Misc {CarPin2019arxiv,
+    key          = {},
+    title        = {Robot Co-design: Beyond the Monotone Case},
+    author       = {Carlone, Luca and Pinciroli, Carlo},
+    howpublished = {https://arxiv.org/abs/1902.05880v1},
+    year         = {2019},
+    note         = {},
+    annote       = {},
 }
 
 @Article {BirLigBoz-etal2019FRONTRAI,
