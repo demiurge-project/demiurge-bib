@@ -58,7 +58,7 @@ Select from demiurge-project/demiurge-bib the master branch as the base and your
   Articles that have been published in the proceedings of a conference
 * @Book:  
   Books written by one or several authors
-* @InCollections:  
+* @InCollection:  
   Works written by one or several authors, that are part of a collection (i.e. an appended collection of manuscripts from several authors)
 * @PhDThesis:  
   PhD theses,
@@ -137,7 +137,7 @@ Words with defined capitalization (proper names, algorithms, etc.) should be esc
 Also enclose the full name in the curly braces and not only the parts you want to protect.
 Do not use double curly braces as this will prevent the case changing algorithm from working correctly.  
 Use title case (capitalizing everything but particles) for book titles.
-This affects ```title``` fields of @Book entries, ```booktitle``` fields of @InCollections and @InProceedings (and for @InProceedings especially the value in the proceedings.bib files).  
+This affects ```title``` fields of @Book entries, ```booktitle``` fields of @InCollection and @InProceedings (and for @InProceedings especially the value in the proceedings.bib files).  
 The booktitle for proceedings (as defined in proceedings.bib) should be as written on the published proceedings.
 If the title of the proceedings does not contain a reference to the conference, you can add the abbreviated name and year of the conference (prepended by a comma, e.g. ```, ANTS2018```).
 
@@ -190,8 +190,8 @@ For the ```series``` field use the keys from series.bib. <br>
 For the ```publisher``` field use the keys from publisher.bib. <br>
 For the ```address``` field use the keys from address.bib. <br>
 
-#### InCollections
-    @InCollections {,
+#### InCollection
+    @InCollection {,
         title        = {},
         author       = ,
         booktitle    = {},
