@@ -133,21 +133,26 @@ If the address is located in the United States, use the format ```City, State, C
 For online publications (e.g. papers in an online only journal), specific identifiers should be put into the ```pages``` field.
 For example Science Robotics uses a elocation-id (like eaav8006), which should be formatted as ```pages = {eaav8006}```.
 
+The field ```editor``` should contain the names of all editors of the publication.
+In case that there are too many editors, the appearance should be controlled by the style and not by the file.
+
 We will not escape accents or special characters.
 Make sure that your editor is set up with Unicode support (UTF-8 encoding).  
 
 Use sentence case (capitalizing only the first letter) for ```title``` fields.
 Words with defined capitalization (proper names, algorithms, etc.) should be escaped using curly braces ```{}``` (e.g. ```{AutoMoDe}```).
 Also enclose the full name in the curly braces and not only the parts you want to protect.
-Do not use double curly braces as this will prevent the case changing algorithm from working correctly.  
+Do not use double curly braces as this will prevent the case changing algorithm from working correctly.
+Do not use style commands (e.g. \texttt or \textit) in the title.  
 Use title case (capitalizing everything but particles) for book titles.
 This affects ```title``` fields of @Book entries, ```booktitle``` fields of @InCollection and @InProceedings (and for @InProceedings especially the value in the proceedings.bib files).  
 The booktitle for proceedings (as defined in proceedings.bib) should be as written on the published proceedings.
 If the title of the proceedings does not contain a reference to the conference, you can add the abbreviated name and year of the conference (prepended by a comma, e.g. ```, ANTS2018```).
 
-Conferences usually come with proceedings (those should be referenced from the proceedings.bib file).
-Sometimes the conferences however also produce extended versions or post-proceedings in special issues of a journal.
-In that case the entry should be referenced from the file journal.bib.
+Publications related to events (such as conferences, workshops or seminars) should be included as ```@InProceedings```.
+Reference proceedings (and post-proceedings) from the file proceedings.bib.  
+If the article was published in a special issue dedicated to the conference, it should be an ```@Article``` instead.
+In that case the entry should be referencing the file journal.bib.
 
 Sometimes titles or the list of authors can be long.
 However **do not** put a line break in the field, as this hinders the tracking of changes that git can automatically do.
