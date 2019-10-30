@@ -1,6 +1,5 @@
 % Encoding: UTF-8
 
-@comment{Misc in README has a wrong field description}
 @Article {SchLotLut-etal2015ITIT,
     title        = {Model-driven software systems engineering in robotics: covering the complete life-cycle of a robot},
     author       = {Schlegel, Christian and Lotz, Alex and Lutz, Matthias and Stampfer, Dennis and Ingl{\'e}s-Romero, Juan F and Vicente-Chicote, Cristina},
@@ -17,10 +16,12 @@
 
 @Book {Bru2007book,
     title        = {Software engineering for experimental robotics},
-    editor/author= {Brugali, Davide},
+    author       = {Brugali, Davide},
+    editor       = ,
     publisher    = {Springer},
     address      = {},
     year         = {2007},
+    edition      = {},
     doi          = {10.1007/978-3-540-68951-5},
     note         = {},
     annote       = {},
@@ -74,10 +75,7 @@
     annote       = {},
 }
 
-@comment{What does key refer to?}
-@comment{Do we accept \url? if so, create a rule for this. howpublished: online, url: www...? Check all Misc}
 @Misc {KucLigBozBir2018ants-supp,
-    key          = {},
     title        = {Behavior trees as a control architecture in the automatic design of robot swarms: Supplementary material},
     author       = {Kuckling, J. and Ligot, A. and Bozhinoski, D. and Birattari, M.},
     howpublished = {\url{http://iridia.ulb.ac.be/supp/IridiaSupp2018-004/index.html}},
@@ -87,7 +85,6 @@
 }
 
 @comment{Missing year in TechReport? If not stated differently, the year is as it is in the key}
-@comment{Is the address in TechReport just the country? If so, add rule.}
 @TechReport {StrTurSal-etal2013techrep,
     title        = {{IRIDIA}'s arena tracking system},
     author       = {Stranieri, A. and Turgut, A. E. and Salvaro, M. and Garattoni, L. and Francesca, G. and Reina, A. and Dorigo, M. and Birattari, M.},
@@ -187,10 +184,12 @@
 
 @Book {Tri2008book,
     title        = {Evolutionary Swarm Robotics},
-    editor/author= {Trianni, V.},
+    author       = {Trianni, V.},
+    editor       = ,
     publisher    = {Springer},
     address      = {Berlin, Germany},
     year         = {2008},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -246,10 +245,12 @@
 
 @Book {Bir2009book,
     title        = {Tuning Metaheuristics: A Machine Learning Perspective},
-    editor/author= {Birattari, M.},
+    author       = {Birattari, M.},
+    editor       = ,
     publisher    = {Springer},
     address      = {Berlin, Germany},
     year         = {2009},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -281,10 +282,12 @@
 
 @Book {ChaCleKleTuk1983book,
     title        = {Graphical Methods For Data Analysis},
-    editor/author= {Chambers, J.M. and Cleveland, W.S. and Kleiner, B and Tukey, P.A.},
+    author       = {Chambers, J.M. and Cleveland, W.S. and Kleiner, B and Tukey, P.A.},
+    editor       = ,
     publisher    = {Wadsworth},
     address      = {Belmont CA},
     year         = {1983},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -729,14 +732,13 @@
     annote       = {},
 }
 
-@comment{This does not fit very well with Misc. Check what type of entry does fit better.}
-@Manual{R,
-    title={},
-    author={{R Development Core Team}},
-    organization={R Foundation for Statistical Computing},
-    address={Vienna, Austria},
-    year={2008},
-    url={http://www.R-project.org},
+@Misc {R,
+    title        = {The {R} Project for Statistical Computing},
+    author       = {{R Development Core Team}},
+    howpublished = {\url{http://www.R-project.org}},
+    year         = {2008},
+    note         = {},
+    annote       = {},
 }
 
 @Article {BalArk1994AR,
@@ -924,10 +926,12 @@
 
 @Book {ColOgr2018book,
     title        = {Behavior Trees in Robotics and {AI}: An Introduction},
-    editor/author= {Colledanchise, Michele and {\"O}gren, Petter},
+    author       = {Colledanchise, Michele and {\"O}gren, Petter},
+    editor       = ,
     publisher    = {CRC Press},
     address      = {},
     year         = {2018},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -1025,10 +1029,12 @@
 
 @Book {NolFlo2000book,
     title        = {Evolutionary Robotics},
-    editor/author= {S. Nolfi and D. Floreano},
+    author       = {S. Nolfi and D. Floreano},
+    editor       = ,
     publisher    = {MIT Press},
     address      = {Cambridge, MA},
     year         = {2000},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -1116,9 +1122,7 @@
     annote       = {},
 }
 
-@comment{Replaced Cha2007misc, misc is not a meaningful and descriptive identifier}
 @Misc {Cha2007aigamedev,
-    key          = {},
     title        = {Understanding Behavior Trees},
     author       = {Champandard, Alex J.},
     howpublished = {\url{http://aigamedev.com/open/articles/bt-overview/}},
@@ -1178,7 +1182,6 @@
     annote       = {},
 }
 
-@comment{Check for consistency of institution in techreps of IRIDIA}
 @TechReport {LigHasDel-etal2017techrep,
     title        = {{AutoMoDe}, {NEAT}, and {EvoStick}: implementations for the e-puck robot in {ARGoS3}},
     author       = {Ligot, A. and Hasselmann, K. and Delhaisse, B. and Garattoni, L. and Francesca, G. and Birattari, M.},
@@ -1278,13 +1281,14 @@
     annote       = {},
 }
 
-@comment{Add edition in books? (Con1999book: Third Edition)}
 @Book {Con1999book,
     title        = {Practical Nonparametric Statistics},
-    editor/author= {W. J. Conover},
+    author       = {W. J. Conover},
+    editor       = ,
     publisher    = {John Wiley \& Sons},
     address      = {New York},
     year         = {1999},
+    edition      = {Third},
     doi          = {},
     note         = {},
     annote       = {},
@@ -1330,10 +1334,12 @@
 
 @Book {NehDau2002book,
     title        = {Imitation in animals and artifacts},
-    editor/author= {Nehaniv, Chrystopher L and Dautenhahn, Kerstin},
+    author       = {Nehaniv, Chrystopher L and Dautenhahn, Kerstin},
+    editor       = ,
     publisher    = {MIT press},
     address      = {},
     year         = {2002},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -1424,12 +1430,10 @@
     annote       = {},
 }
 
-@comment{Do we accept \par?}
 @Misc {HasRobBir2018ants-supp,
-    key          = {},
     title        = {Automatic design of communication-based behaviors for robot swarms: Supplementary material},
     author       = {Ken Hasselmann and Fr\'ed\'eric Robert and Mauro Birattari},
-    howpublished = {\par http://iridia.ulb.ac.be/supp/IridiaSupp2018-003/},
+    howpublished = {\url{http://iridia.ulb.ac.be/supp/IridiaSupp2018-003/}},
     year         = {2018},
     note         = {},
     annote       = {},
@@ -1437,7 +1441,6 @@
 
 @comment{This is the reference to the journal paper. Update as soon as it is published}
 @Misc {HasBir2019supp,
-    key          = {},
     title        = {Modular automatic design of collective behaviors for robots endowed with local communication capabilities: Supplementary material},
     author       = {Ken Hasselmann and Mauro Birattari},
     howpublished = {\par http://iridia.ulb.ac.be/supp/IridiaSupp2019-005/},
@@ -1494,10 +1497,7 @@
     annote       = {},
 }
 
-@comment{Do we accept \url?}
-@comment{Game Developers Conference, AI Summit, originally in booktitle}
 @Misc {ChaDawHer2010gdc,
-    key          = {},
     title        = {Behavior trees: Three ways of cultivating game {AI}},
     author       = {Champandard, Alex J and Dawe, Michael and Hernandez-Cerpa, David},
     howpublished = {\url{https://www.gdcvault.com/play/1012744/Behavior-Trees-Three-Ways-of}},
@@ -1630,10 +1630,12 @@
 
 @Book {BaeFogMic2000book,
     title        = {Handbook of Evolutionary Computation},
+    author       = ,
     editor       = {B{\"a}ck, Thomas and Fogel, David B. and Michalewicz, Zbigniew},
     publisher    = {IOP Publishing Ltd.},
     address      = {Bristol, UK},
     year         = {2000},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -1713,7 +1715,6 @@
 }
 
 @Misc {LigKucBozBir2018supp,
-    key          = {},
     title        = {{AutoMoDe-Maple}: Automatic modular design of robot swarms using behavior trees as a control architecture: Supplementary material},
     author       = {Ligot, A. and Kuckling, J. and Bozhinoski, D. and Birattari, M.},
     howpublished = {\url{http://iridia.ulb.ac.be/supp/IridiaSupp2018-006/index.html}},
@@ -1947,21 +1948,20 @@
     annote       = {},
 }
 
-@comment{Can we keep both author and editor? After removing one it is necessary to adjust the indentation.}
-@comment{PahBeiFelGro2007book: Third Edition}
 @Book {PahBeiFelGro2007book,
     title        = {Engineering Design: A Systematic Approach},
-    editor/author= {Pahl, Gerhard and Beitz, Wolfgang and Feldhusen, Joerg and Grote, Karl-Heinrich},
+    author       = {Pahl, Gerhard and Beitz, Wolfgang and Feldhusen, Joerg and Grote, Karl-Heinrich},
+    editor       = ,
     publisher    = {Springer},
     address      = {London, UK},
     year         = {2007},
+    edition      = {Third},
     doi          = {10.1007/978-1-84628-319-2},
     note         = {},
     annote       = {},
 }
 
-@Misc {SalLigBir2019supp,
-    key          = {},
+@Misc {SalLigBir2019PEERJCS-supp,
     title        = {Concurrent design of control software and configuration of the hardware for a robot swarm: Supplementary material},
     author       = {Salman, Muhammad and Ligot, Antoine and Birattari, Mauro},
     howpublished = {\par http://iridia.ulb.ac.be/supp/IridiaSupp2019-001/},
@@ -1972,10 +1972,12 @@
 
 @Book {GenPot2019book,
     title        = {Handbook of Metaheuristics},
-    editor/author= {Michel Gendreau and Jean-Yves Potvin},
+    author       = {Michel Gendreau and Jean-Yves Potvin},
+    editor       = ,
     publisher    = {Springer},
     address      = {Cham, Switzerland},
     year         = {2019},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -1983,10 +1985,12 @@
 
 @Book {HooStu2004book,
     title        = {Stochastic Local Search: Foundations \& Applications},
-    editor/author= {Hoos, Holger and Stüzle, Thomas},
+    author       = {Hoos, Holger and Stüzle, Thomas},
+    editor       = ,
     publisher    = {Morgan Kaufmann},
     address      = {San Francisco CA},
     year         = {2004},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -2042,10 +2046,12 @@
 
 @Book {Koz1992book,
     title        = {Genetic programming: on the programming of computers by means of natural selection},
-    editor/author= {Koza, John R},
+    author       = {Koza, John R},
+    editor       = ,
     publisher    = {MIT press},
     address      = {},
     year         = {1992},
+    edition      = {},
     doi          = {},
     note         = {},
     annote       = {},
@@ -2529,7 +2535,6 @@
     annote       = {},
 }
 
-@comment{Check for consistency with all From Animals to Animats}
 @InProceedings {FloMon1996sab,
     title        = {Evolution of plastic neurocontrollers for situated agents},
     author       = {Floreano, Dario and Mondada, Francesco},
@@ -2633,7 +2638,6 @@
     annote       = {},
 }
 
-@comment{Add in README: elocation-id serves the same purpose as pages but only exists for electronic publications, it should be placed in pages}
 @Article {XieSunFan-etal2019SCIROB,
     title        = {Reconfigurable magnetic microrobot swarm: Multimode transformation, locomotion, and manipulation},
     author       = {Xie, Hui and Sun, Mengmeng and Fan, Xinjian and Lin, Zhihua and Chen, Weinan and Wang, Lei and Dong, Lixin and He, Qiang},
@@ -2893,12 +2897,10 @@
     annote       = {},
 }
 
-@comment{https://arxiv.org/abs/1902.05880v1, originally as url: https://arxiv.org/abs/1902.05880v1}
 @Misc {CarPin2019arxiv,
-    key          = {},
     title        = {Robot Co-design: Beyond the Monotone Case},
     author       = {Carlone, Luca and Pinciroli, Carlo},
-    howpublished = {https://arxiv.org/abs/1902.05880v1},
+    howpublished = {\url{https://arxiv.org/abs/1902.05880v1}},
     year         = {2019},
     note         = {},
     annote       = {},
@@ -3079,10 +3081,12 @@
 
 @Book {GloKoc2003book,
     title        = {Handbook of Metaheuristics},
+    author       = ,
     editor       = {Glover, Fred and Kochenberger, Gary A.},
     publisher    = {Springer},
     address      = {Boston, MA},
     year         = {2003},
+    edition      = {},
     doi          = {10.1007/0-306-48056-5_11},
     note         = {},
     annote       = {},

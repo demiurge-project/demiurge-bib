@@ -125,9 +125,13 @@ New entries should be added at the end of the file.
 LNCS (as probably other Springer series as well) issues separate volumes.
 The number field is not used in this case.
 
-The field ```key``` in @Misc entries, is used to sort the entry, even if no author can be given.
-
 The field ```doi``` refers only to the identifier, not the URL at doi.org
+
+The field ```address``` should be always of the form ```City, Country``` (e.g. ```Berlin, Germany```, ```Cham, Switzerland```, ```Brussels, Belgium```).  
+If the address is located in the United States, use the format ```City, State, Country```, that is ```Piscataway, NJ, USA``` or ```Cambridge, MA, USA```.
+
+For online publications (e.g. papers in an online only journal), specific identifiers should be put into the ```pages``` field.
+For example Science Robotics uses a elocation-id (like eaav8006), which should be formatted as ```pages = {eaav8006}```.
 
 We will not escape accents or special characters.
 Make sure that your editor is set up with Unicode support (UTF-8 encoding).  
@@ -215,10 +219,12 @@ For the ```address``` field use the keys from address.bib. <br>
 #### Book
     @Book {,
         title        = {},
-        editor/author= ,
+        author       = ,
+        editor       = ,
         publisher    = ,
         address      = ,
         year         = {},
+        edition      = {},
         doi          = {},
         note         = {},
         annote       = {},
@@ -227,6 +233,7 @@ Choose either author (single author of the book or the same set of authors throu
 For the ```author``` field and ```editor``` field use the keys from author.bib. <br>
 For the ```publisher``` field use the keys from publisher.bib. <br>
 For the ```address``` field use the keys from address.bib. <br>
+For the ```edition``` field use the ordinal word (```Third```).
 
 #### PhDThesis
     @PhDThesis {,
@@ -262,6 +269,7 @@ For the ```address``` field use the keys from address.bib. <br>
         author       = ,
         institution  = ,
         address      = ,
+        year         = {},
         number       = {},
         note         = {},
         annote       = {},
@@ -272,7 +280,6 @@ For the ```address``` field use the keys from address.bib. <br>
 
 #### Misc
     @Misc {,
-        key          = {},
         title        = {},
         author       = ,
         howpublished = {},
@@ -281,5 +288,4 @@ For the ```address``` field use the keys from address.bib. <br>
         annote       = {},
     }
 For the ```author``` field use the keys from author.bib. <br>
-For the ```school``` field use the keys from institution.bib. <br>
-For the ```address``` field use the keys from address.bib. <br>
+If the source was published online, then add ```\url{www.the-true-source.com}``` in the field ```howpublished```.
