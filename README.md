@@ -157,6 +157,12 @@ In that case the entry should be referencing the file journal.bib.
 Sometimes titles or the list of authors can be long.
 However **do not** put a line break in the field, as this hinders the tracking of changes that git can automatically do.
 
+Some DOIs contain an underscore.
+**Do not** escape it as ```\_```.
+Always keep the DOI in a shape that it can be pasted directly into doi.org.
+If your bibliography does not comply with this convention, please look at ways of redefining the style or the doi command to handle the doi correctly.
+Escaping in the bibliography is not an option as some styles handle the DOI correctly and would show the backslash in the bibliography.
+
 ## Templates
 
 #### Article
