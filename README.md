@@ -262,7 +262,7 @@ For the ```address``` field use the keys from address.bib. <br>
         note         = {},
         annote       = {},
     }
-Choose either author (single author of the book or the same set of authors throughout the book) or editor field (otherwise).
+Choose either author (single author of the book or the same set of authors throughout the book) or editor field (otherwise). Leave the other field blank.  
 For the ```author``` field and ```editor``` field use the keys from author.bib. <br>
 For the ```publisher``` field use the keys from publisher.bib. <br>
 For the ```address``` field use the keys from address.bib. <br>
