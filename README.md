@@ -125,19 +125,52 @@ New entries should be added at the end of the file.
 LNCS (as probably other Springer series as well) issues separate volumes.
 The number field is not used in this case.
 
+For online publications (e.g. papers in an online only journal), specific identifiers should be put into the ```pages``` field.
+For example Science Robotics uses a elocation-id (like eaav8006), which should be formatted as ```pages = {eaav8006}```.
+
+We will not escape accents or special characters.
+Make sure that your editor is set up with Unicode support (UTF-8 encoding).  
+Note that some bibtex implementations might not support UTF-8.
+In that case try and use Biblatex (with biber) instead.
+
+Publications related to events (such as conferences, workshops or seminars) should be included as ```@InProceedings```.
+Reference proceedings (and post-proceedings) from the file proceedings.bib.  
+If the article was published in a special issue dedicated to the conference, it should be an ```@Article``` instead.
+In that case the entry should be referencing the file journal.bib.
+
+Sometimes titles or the list of authors can be long.
+However **do not** put a line break in the field, as this hinders the tracking of changes that git can automatically do.
+
+#### DOI
+
 The field ```doi``` refers only to the identifier, not the URL at doi.org
+
+Some DOIs contain an underscore.
+**Do not** escape it as ```\_```.
+Always keep the DOI in a shape that it can be pasted directly into doi.org.
+If your bibliography does not comply with this convention, please look at ways of redefining the style or the doi command to handle the doi correctly.
+Escaping in the bibliography is not an option as some styles handle the DOI correctly and would show the backslash in the bibliography.
+
+#### Publishers:
+
+In the case that a book is published in an imprint or that the original publisher was bought up by a publishing house (while keeping their brand as an imprint), use whatever name is more common.
+For example "CRC Press" (an imprint of the "Taylor & Francis Group") is sufficiently well know to be used as publisher.
+On the other hand, "A Bradford Book" (an imprint of "MIT Press") is not very know, and the publisher should rather be "MIT Press".
+
+Springer has gone by many names in the past.
+We will refer to all of them as Springer, nevertheless.
+
+IEEE (Press) is not the same as IEEE Computer Society (Press).
+However, if it is not clear if a publication was published be IEEE or IEEE Computer Society, the default is the IEEE Press publisher.
+
+Ultimately, the goal of the adding the publisher is to give guidance on where to find additional information or from where to purchase a hard copy of the publication.
+
+#### Address:
 
 The field ```address``` should be always of the form ```City, Country``` (e.g. ```Berlin, Germany```, ```Cham, Switzerland```, ```Brussels, Belgium```).  
 If the address is located in the United States, use the format ```City, State, Country```, that is ```Piscataway, NJ, USA``` or ```Cambridge, MA, USA```.
 
-For online publications (e.g. papers in an online only journal), specific identifiers should be put into the ```pages``` field.
-For example Science Robotics uses a elocation-id (like eaav8006), which should be formatted as ```pages = {eaav8006}```.
-
-The field ```editor``` should contain the names of all editors of the publication.
-In case that there are too many editors, the appearance should be controlled by the style and not by the file.
-
-We will not escape accents or special characters.
-Make sure that your editor is set up with Unicode support (UTF-8 encoding).  
+#### Title:
 
 Use sentence case (capitalizing only the first letter) for ```title``` fields.
 Words with defined capitalization (proper names, algorithms, etc.) should be escaped using curly braces ```{}``` (e.g. ```{AutoMoDe}```).
@@ -149,19 +182,8 @@ This affects ```title``` fields of @Book entries, ```booktitle``` fields of @InC
 The booktitle for proceedings (as defined in proceedings.bib) should be as written on the published proceedings.
 If the title of the proceedings does not contain a reference to the conference, you can add the abbreviated name and year of the conference (prepended by a comma, e.g. ```, ANTS2018```).
 
-Publications related to events (such as conferences, workshops or seminars) should be included as ```@InProceedings```.
-Reference proceedings (and post-proceedings) from the file proceedings.bib.  
-If the article was published in a special issue dedicated to the conference, it should be an ```@Article``` instead.
-In that case the entry should be referencing the file journal.bib.
-
-Sometimes titles or the list of authors can be long.
-However **do not** put a line break in the field, as this hinders the tracking of changes that git can automatically do.
-
-Some DOIs contain an underscore.
-**Do not** escape it as ```\_```.
-Always keep the DOI in a shape that it can be pasted directly into doi.org.
-If your bibliography does not comply with this convention, please look at ways of redefining the style or the doi command to handle the doi correctly.
-Escaping in the bibliography is not an option as some styles handle the DOI correctly and would show the backslash in the bibliography.
+The field ```editor``` should contain the names of all editors of the publication.
+In case that there are too many editors, the appearance should be controlled by the style and not by the file.
 
 ## Templates
 
