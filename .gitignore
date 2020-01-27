@@ -243,3 +243,4 @@ TSWLatexianTemp*
 
 # test files
 test/*
+!test/*.tex
