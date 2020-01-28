@@ -9,7 +9,7 @@ Open a terminal in that folder and run:
 
 In your .tex file include the following line to access the references:
 
-    \bibliography{../demiurge-bib/authors,../demiurge-bib/addresses,../demiurge-bib/proceedings,../demiurge-bib/journals,../demiurge-bib/publishers,../demiurge-bib/series,../demiurge-bib/schools,../demiurge-bib/bibliography}
+    \bibliography{../demiurge-bib/author,../demiurge-bib/address,../demiurge-bib/proceedings,../demiurge-bib/journal,../demiurge-bib/publisher,../demiurge-bib/series,../demiurge-bib/institution,../demiurge-bib/bibliography}
 
 ## How to contribute to the repository
 
