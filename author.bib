@@ -6,6 +6,10 @@
 @comment{If in doubt look up names here: https://dblp.org or on the websites of the people or on curated sites (OrcID, wellmaintained Google Scholar, ResearchGate)}
 @comment{If an author has published under different names (usually different middle names): Use judgement to determine if most recent or most often used naming style should be used}
 
+@comment{There is a known issue, if the first name starts with a non-ASCII character, the compilation for certain bibliography styles can break}
+@comment{Only in this case, escape the first letter of the first name like shown here: https://tex.stackexchange.com/a/57745}
+@comment{As an alternative you can use pybtex, a library claiming to be fully compatible with Bibtex and UTF-8}
+
 @string{Aarts_E = "Aarts, Emile"}
 @string{Abdullah_S = "Abdullah, Salwani"}
 @string{Adami_C = "Adami, Christoph"}
@@ -215,7 +219,7 @@
 @string{Gudwin_R = "Gudwin, Ricardo"}
 @string{Guerin_K = "Guerin, Kelleher"}
 @string{Guignard_A = "Guignard, André"}
-@string{Gutierrez_A = "Gutiérrez, Álvaro"}
+@string{Gutierrez_A = "Gutiérrez, {\'A}lvaro"}
 @string{Gutjahr_W = "Gutjahr, Walter"}
 @string{Guzzi_J = "Guzzi, Jérôme"}
 
