@@ -161,7 +161,7 @@ Springer has gone by many names in the past.
 We will refer to all of them as Springer, nevertheless.
 
 IEEE (Press) is not the same as IEEE Computer Society (Press).
-However, if it is not clear if a publication was published be IEEE or IEEE Computer Society, the default is the IEEE Press publisher.
+However, if it is not clear if a publication was published be IEEE or IEEE Computer Society, the default is the IEEE publisher.
 
 Ultimately, the goal of the adding the publisher is to give guidance on where to find additional information or from where to purchase a hard copy of the publication.
 
@@ -180,7 +180,7 @@ Do not use style commands (e.g. \texttt or \textit) in the title.
 Use title case (capitalizing everything but particles) for book titles.
 This affects ```title``` fields of @Book entries, ```booktitle``` fields of @InCollection and @InProceedings (and for @InProceedings especially the value in the proceedings.bib files).  
 The booktitle for proceedings (as defined in proceedings.bib) should be as written on the published proceedings.
-If the title of the proceedings does not contain a reference to the conference, you can add the abbreviated name and year of the conference (prepended by a comma, e.g. ```, ANTS2018```).
+If the title of the proceedings does not contain a reference to the conference, you can add the abbreviated name and year of the conference (prepended by a comma, e.g. ```, ANTS 2018```).
 
 The field ```editor``` should contain the names of all editors of the publication.
 In case that there are too many editors, the appearance should be controlled by the style and not by the file.
