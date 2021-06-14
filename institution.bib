@@ -1,0 +1,25 @@
+% Encoding: UTF-8
+
+@comment{This file contains string definitions for the institution field.}
+@comment{It is sorted alphabetically by the string definition of the name of the main institution (universities over departments).}
+@comment{Institution names must be written in its original language, where possible}
+@comment{If in doubt look up the official website of the institution}
+
+@comment{For standalone Institutions (like universities), the key should be INITIALS_COUNTRYCODE, where where COUNTRYCODE is the ISO 3166-1 alpha-3 country code.}
+@comment{ISO 3166-1 alpha-3: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3.}
+@comment{For adjunct Institutions (like departments and labs), the key should be INITIALS_STANDALONE_COUNTRYCODE, where STANDALONE are the initials of the owner Institution.}
+@comment{Only include characters A-Z and a-z for the key. Drop or replace other characters as appropriate.}
+@comment{The institution names should be written in UTF-8. Do not escape special characters.}
+@comment{Here are some characters that might be useful, so you can copy and paste them:}
+@comment{é ß ó ñ á ü Á ë ú ó Ş ö ä ã ç č ø ł è ô}
+
+@comment{There is a known issue, if the Institution name starts with a non-ASCII character, the compilation for certain bibliography styles can break}
+@comment{Only in this case, escape the first letter of the first name like shown here: https://tex.stackexchange.com/a/57745}
+@comment{As an alternative you can use pybtex, a library claiming to be fully compatible with Bibtex and UTF-8}
+
+
+@string{ ULB_BEL          = "Université Libre de Bruxelles"}
+@string{ IRIDIA_ULB_BEL   = "IRIDIA" # comma #  ULB_BEL}
+
+@string{ OSU_USA          = "Oregon State University"}
+@string{ DCS_OSU_USA      = "Department of Computer Science" # comma # OSU_USA}

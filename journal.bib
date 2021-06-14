@@ -1,4 +1,18 @@
-﻿@comment{Sorted alphabetically by journal name, including every letter. Space goes before other letters.}
+% Encoding: UTF-8
+
+@comment{This file contains string definitions for the journal field.}
+@comment{It is sorted alphabetically by the key of the string definition of the journal name, including every letter. Space goes before other letters.}
+
+@comment{The key should be INITIALS, where where INITIALS are representative initials of the name of the journal.}
+@comment{Only include characters A-Z and a-z for the key. Drop or replace other characters as appropriate.}
+@comment{The journal names should be written in UTF-8. Do not escape special characters.}
+@comment{Here are some characters that might be useful, so you can copy and paste them:}
+@comment{é ß ó ñ á ü Á ë ú ó Ş ö ä ã ç č ø ł è ô}
+
+@comment{There is a known issue, if the Journal name starts with a non-ASCII character, the compilation for certain bibliography styles can break}
+@comment{Only in this case, escape the first letter of the first name like shown here: https://tex.stackexchange.com/a/57745}
+@comment{As an alternative you can use pybtex, a library claiming to be fully compatible with Bibtex and UTF-8}
+
 
 @string{ ACMTAAS     = "ACM Transactions on Autonomous Adaptive Systems" }
 @string{ AB          = "Adaptive Behavior" }
