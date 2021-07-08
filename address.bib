@@ -6,7 +6,7 @@
 @comment{English short names of countries officially defined by the ISO 3166/MA: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3.}
 
 @comment{The key should be CityName_COUNTRYCODE, where COUNTRYCODE is the ISO 3166-1 alpha-3 country code.}
-@comment{ISO 3166-1 alpha-3: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3.}
+@comment{ISO 3166-1 alpha-3: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3}
 @comment{Only include characters A-Z and a-z for the key. Drop or replace other characters as appropriate.}
 @comment{The name should be formatted as City, Country.  For cities in USA, the name should be formatted as City, STATEINITIALS, Country.}
 @comment{The names should be written in UTF-8. Do not escape special characters.}
@@ -20,11 +20,17 @@
 
 @comment{In many proceedings entries, the conference place has been introduced in the address}
 
+@string{ AUS                 = "Australia" }
+@string{ Sydney_AUS          = "Sydney" # comma # AUS }
+
 @string{ BEL                 = "Belgium" }
 @string{ Brussels_BEL        = "Brussels" # comma # BEL }
 
 @string{ CHL                 = "Chile" }
 @string{ Curico_CHL          = "Curico" # comma # CHL }
+
+@string{ CZE                 = "Czech Republic" }
+@string{ Prague_CZE          = "Prague" # comma # CZE }
 
 @string{ DEU                 = "Germany" }
 @string{ Aachen_DEU          = "Aachen" # comma # DEU }
@@ -55,7 +61,7 @@
 @comment{Special case: shortening United States of America}
 @string{ USA                 = "USA" }
 
-@comment{Special case: California, USA}
+@comment{Special case: USA states (e.g., California, USA)}
 @string{ CA_USA              = "CA" # comma # USA }
 @string{ Belmont_CA_USA      = "Belmont" # comma # CA_USA }
 @string{ LosAlamitos_CA_USA  = "Los Alamitos" # comma # CA_USA }
@@ -91,3 +97,6 @@
 
 @string{ UT_USA              = "UT" # comma # USA }
 @string{ Logan_USA           = "Logan" # comma # UT_USA }
+
+@string{ VA_USA              = "VA" # comma # USA }
+@string{ Reston_USA          = "Reston" # comma # VA_USA }
