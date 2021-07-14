@@ -9,7 +9,7 @@ Open a terminal in that folder and run:
 
 In your .tex file include the following line to access the references:
 
-    \bibliography{../demiurge-bib/author,../demiurge-bib/address,../demiurge-bib/proceedings,../demiurge-bib/journal,../demiurge-bib/publisher,../demiurge-bib/series,../demiurge-bib/institution,../demiurge-bib/bibliography}
+    \bibliography{../demiurge-bib/definitions,../demiurge-bib/author,../demiurge-bib/address,../demiurge-bib/proceedings,../demiurge-bib/journal,../demiurge-bib/publisher,../demiurge-bib/series,../demiurge-bib/institution,../demiurge-bib/bibliography}
 
 ## How to contribute to the repository
 
@@ -102,11 +102,15 @@ In order to decrease the variants of spellings for names, journals, conferences,
 * [bibliography.bib](bibliography.bib): This file contains all bibliography entries. It will make use of the keys defined in other files.
 * [author.bib](author.bib): This file contains entries for names of people. It is used to supply the keys for the fields ```author``` and ```editor```.
 * [journal.bib](journal.bib): This file contains entries for journal names. It is used to supply the keys for the field ```journal```.
+* [journal-short.bib](journal.bib): This file contains short entries for journal names. It is used to supply the keys for the field ```journal```. Whenever possible, it is recomended to use the original form in journal.bib.
 * [proceedings.bib](proceedings.bib): This file contains entries for proceedings. It is used to supply the keys for the field ```booktitle``` of the @InProceedings entries in bibliography.bib.
+* [proceedings-short.bib](proceedings-short.bib): This file contains short entries for proceedings. It is used to supply the keys for the field ```booktitle``` of the @InProceedings entries in bibliography.bib. Whenever possible, it is recomended to use the original form in proceedings.bib.
 * [publisher.bib](publisher.bib): This file contains the entries for all publisher names. It is used to supply the keys for the field ```publisher```.
 * [institution.bib](institution.bib): This file contains the entries for all institutions (university, research labs). It supplies the keys for the field ```school``` of the @PhDThesis and @MastersThesis entries and the field ```institution``` of the @TechReport entries in the bibliography.bib.
 * [address.bib](address.bib): This file contains entries for addresses (city and country) for all journals and institutions. It supplies the keys for the field ```address```.
 * [series.bib](series.bib): This file contains entries for publication series (such as LNCS). It supplies keys for the field ```series```.
+* [series-short.bib](series.bib): This file contains short entries for publication series (such as LNCS). It supplies keys for the field ```series```. Whenever possible, it is recomended to use the original form in series.bib.
+* [definitions.bib](definitions.bib): This file supplies keys used across all the files. For example, ```et al.```.
 
 The file bibliography.bib contains all bibtex entries. New entries should be appended at the end of this file.
 The other files only contain string definitions. These definitions should be kept in alphabetical order with regard to the key of the definition.
