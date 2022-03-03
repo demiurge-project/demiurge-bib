@@ -140,6 +140,10 @@ In that case the entry should be referencing the file journal.bib.
 Sometimes titles or the list of authors can be long.
 However **do not** put a line break in the field, as this hinders the tracking of changes that git can automatically do.
 
+For conferences that are published in a different year, put the year of publication in the ```year``` field.
+Sometimes an article becomes available online before the publication date.
+In that case, use the publication date, as indicated by the publisher.
+
 #### DOI
 
 The field ```doi``` refers only to the identifier, not the URL at doi.org
@@ -173,7 +177,9 @@ If the address is located in the United States, use the format ```City, State, C
 #### Title:
 
 Use sentence case (capitalizing only the first letter) for ```title``` fields.
+Do not capitalize after a colon.
 Words with defined capitalization (proper names, algorithms, etc.) should be escaped using curly braces ```{}``` (e.g. ```{AutoMoDe}```).
+Algorithms that are only composed of regular words (simulated annealing, neural network) should not be protected.
 Also enclose the full name in the curly braces and not only the parts you want to protect.
 Do not use double curly braces as this will prevent the case changing algorithm from working correctly.
 Do not use style commands (e.g. \texttt or \textit) in the title.  
