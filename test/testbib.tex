@@ -18,11 +18,10 @@
 \usepackage[numbers]{natbib}
 
 \renewcommand{\refname}{\textsf{IRIDIA} \BibTeX{} Repository (\today)}
-%FIXME: Add \textsf{IRIDIA} \BibTeX{} Repository and date to headers and page X out of Z to footer.
 \begin{document}
 \nocite{*}
 \newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{\normalfont\texttt{doi:\nolinkurl{#1}}}}
-% \bibliographystyle{plainnat}
+% \bibliographystyle{naturemag}
 \bibliographystyle{unsrt}
 \bibliography{../definitions,../author,../address,../proceedings,../journal,../publisher,../series,../institution,../bibliography}
 \end{document}

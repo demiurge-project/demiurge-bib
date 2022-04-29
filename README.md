@@ -26,22 +26,17 @@ In your .tex file include the following line to access the references:
 A good commit message consists of several parts.  
 First comes one line that summarizes your edits. This line will be shown in the preview of github. Candidates for such a line could be "Added entries from GECCO2020", "Uploaded bibliography for ANTS2018 submission", "Fixed authors with more than two names".
 
-Then you should add details of what you changed. These changes should be summarized in the form:
-
-    file:
-    [key] added/modified/deleted
+Then you should add details of what you changed.
 
 For example a good commit message could look like this:
 
     Updated author names for ANTS2018 paper of Kuckling et al.
 
-    author.bib
-    [Kuckling_J] added
-    [Birattari_M] modified
+    [Kuckling_J]: author key added
+    [Birattari_M]: corrected typo in name
 
-    bibliography.bib
-    [KucLigBozBir2018ants] modified
-    [KucLigBozBir2018ants-supp] modified
+    [KucLigBozBir2018ants]: fixed author list
+    [KucLigBozBir2018ants-supp]: fixed author list
 
 ### How do I create a pull request?
 
@@ -116,12 +111,12 @@ The file bibliography.bib contains all bibtex entries. New entries should be app
 The other files only contain string definitions. These definitions should be kept in alphabetical order with regard to the key of the definition.
 
 All files are indented with four spaces.  
-Around the character ```=``` no spaces are used (see templates).
+The character ```=``` is justified using spaces (see templates).
 
 ### Bibtex entries
 Bibtex entries should be as complete and correct as possible.  
 The templates show the necessary information that needs to be included in every entry.  
-If some fields are not applicable (e.g. a journal is not part of a series), then leave the field empty (e.g. ```series={}```).
+If some fields are not applicable (e.g. a journal is not part of a series), then leave the field empty (e.g. ```series = {}```).
 New entries should be added at the end of the file.
 
 ### Notes
@@ -144,6 +139,10 @@ In that case the entry should be referencing the file journal.bib.
 
 Sometimes titles or the list of authors can be long.
 However **do not** put a line break in the field, as this hinders the tracking of changes that git can automatically do.
+
+For conferences that are published in a different year, put the year of publication in the ```year``` field.
+Sometimes an article becomes available online before the publication date.
+In that case, use the publication date, as indicated by the publisher.
 
 #### DOI
 
@@ -171,13 +170,16 @@ Ultimately, the goal of the adding the publisher is to give guidance on where to
 
 #### Address:
 
-The field ```address``` should be always of the form ```City, Country``` (e.g. ```Berlin, Germany```, ```Cham, Switzerland```, ```Brussels, Belgium```).  
+The field ```address``` is the address of the publisher (never the location that a conference took place).
+It should be always of the form ```City, Country``` (e.g. ```Berlin, Germany```, ```Cham, Switzerland```, ```Brussels, Belgium```).  
 If the address is located in the United States, use the format ```City, State, Country```, that is ```Piscataway, NJ, USA``` or ```Cambridge, MA, USA```.
 
 #### Title:
 
 Use sentence case (capitalizing only the first letter) for ```title``` fields.
+Do not capitalize after a colon.
 Words with defined capitalization (proper names, algorithms, etc.) should be escaped using curly braces ```{}``` (e.g. ```{AutoMoDe}```).
+Algorithms that are only composed of regular words (simulated annealing, neural network) should not be protected.
 Also enclose the full name in the curly braces and not only the parts you want to protect.
 Do not use double curly braces as this will prevent the case changing algorithm from working correctly.
 Do not use style commands (e.g. \texttt or \textit) in the title.  
@@ -206,6 +208,7 @@ In case that there are too many editors, the appearance should be controlled by 
         annote       = {},
     }
 For the ```author``` field use the keys from author.bib. <br>
+For the ```journal``` field use the keys from journal.bib. <br>
 For the ```series``` field use the keys from series.bib. <br>
 
 #### InProceedings
@@ -225,8 +228,8 @@ For the ```series``` field use the keys from series.bib. <br>
         note         = {},
         annote       = {},
     }
-For the ```booktitle``` field, use the keys from proceedings.bib. <br>
 For the ```author``` field and ```editor``` field use the keys from author.bib. <br>
+For the ```booktitle``` field, use the keys from proceedings.bib. <br>
 For the ```series``` field use the keys from series.bib. <br>
 For the ```publisher``` field use the keys from publisher.bib. <br>
 For the ```address``` field use the keys from address.bib. <br>
@@ -249,6 +252,7 @@ For the ```address``` field use the keys from address.bib. <br>
         annote       = {},
     }
 For the ```author``` field and ```editor``` field use the keys from author.bib. <br>
+For the ```booktitle``` field, write the title here. Do not use the keys from proceedings.bib. <br>
 For the ```series``` field use the keys from series.bib. <br>
 For the ```publisher``` field use the keys from publisher.bib. <br>
 For the ```address``` field use the keys from address.bib. <br>
