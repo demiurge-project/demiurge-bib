@@ -9,7 +9,7 @@ Open a terminal in that folder and run:
 
 In your .tex file include the following line to access the references:
 
-    \bibliography{../demiurge-bib/author,../demiurge-bib/address,../demiurge-bib/proceedings,../demiurge-bib/journal,../demiurge-bib/publisher,../demiurge-bib/series,../demiurge-bib/institution,../demiurge-bib/bibliography}
+    \bibliography{../demiurge-bib/definitions,../demiurge-bib/author,../demiurge-bib/address,../demiurge-bib/proceedings,../demiurge-bib/journal,../demiurge-bib/publisher,../demiurge-bib/series,../demiurge-bib/institution,../demiurge-bib/bibliography}
 
 ## How to contribute to the repository
 
@@ -26,22 +26,17 @@ In your .tex file include the following line to access the references:
 A good commit message consists of several parts.  
 First comes one line that summarizes your edits. This line will be shown in the preview of github. Candidates for such a line could be "Added entries from GECCO2020", "Uploaded bibliography for ANTS2018 submission", "Fixed authors with more than two names".
 
-Then you should add details of what you changed. These changes should be summarized in the form:
-
-    file:
-    [key] added/modified/deleted
+Then you should add details of what you changed.
 
 For example a good commit message could look like this:
 
     Updated author names for ANTS2018 paper of Kuckling et al.
 
-    author.bib
-    [Kuckling_J] added
-    [Birattari_M] modified
+    [Kuckling_J]: author key added
+    [Birattari_M]: corrected typo in name
 
-    bibliography.bib
-    [KucLigBozBir2018ants] modified
-    [KucLigBozBir2018ants-supp] modified
+    [KucLigBozBir2018ants]: fixed author list
+    [KucLigBozBir2018ants-supp]: fixed author list
 
 ### How do I create a pull request?
 
@@ -102,22 +97,26 @@ In order to decrease the variants of spellings for names, journals, conferences,
 * [bibliography.bib](bibliography.bib): This file contains all bibliography entries. It will make use of the keys defined in other files.
 * [author.bib](author.bib): This file contains entries for names of people. It is used to supply the keys for the fields ```author``` and ```editor```.
 * [journal.bib](journal.bib): This file contains entries for journal names. It is used to supply the keys for the field ```journal```.
+* [journal-short.bib](journal.bib): This file contains short entries for journal names. It is used to supply the keys for the field ```journal```. Whenever possible, it is recomended to use the original form in journal.bib.
 * [proceedings.bib](proceedings.bib): This file contains entries for proceedings. It is used to supply the keys for the field ```booktitle``` of the @InProceedings entries in bibliography.bib.
+* [proceedings-short.bib](proceedings-short.bib): This file contains short entries for proceedings. It is used to supply the keys for the field ```booktitle``` of the @InProceedings entries in bibliography.bib. Whenever possible, it is recomended to use the original form in proceedings.bib.
 * [publisher.bib](publisher.bib): This file contains the entries for all publisher names. It is used to supply the keys for the field ```publisher```.
 * [institution.bib](institution.bib): This file contains the entries for all institutions (university, research labs). It supplies the keys for the field ```school``` of the @PhDThesis and @MastersThesis entries and the field ```institution``` of the @TechReport entries in the bibliography.bib.
 * [address.bib](address.bib): This file contains entries for addresses (city and country) for all journals and institutions. It supplies the keys for the field ```address```.
 * [series.bib](series.bib): This file contains entries for publication series (such as LNCS). It supplies keys for the field ```series```.
+* [series-short.bib](series.bib): This file contains short entries for publication series (such as LNCS). It supplies keys for the field ```series```. Whenever possible, it is recomended to use the original form in series.bib.
+* [definitions.bib](definitions.bib): This file supplies keys used across all the files. For example, ```et al.```.
 
 The file bibliography.bib contains all bibtex entries. New entries should be appended at the end of this file.
 The other files only contain string definitions. These definitions should be kept in alphabetical order with regard to the key of the definition.
 
 All files are indented with four spaces.  
-Around the character ```=``` no spaces are used (see templates).
+The character ```=``` is justified using spaces (see templates).
 
 ### Bibtex entries
 Bibtex entries should be as complete and correct as possible.  
 The templates show the necessary information that needs to be included in every entry.  
-If some fields are not applicable (e.g. a journal is not part of a series), then leave the field empty (e.g. ```series={}```).
+If some fields are not applicable (e.g. a journal is not part of a series), then leave the field empty (e.g. ```series = {}```).
 New entries should be added at the end of the file.
 
 ### Notes
@@ -141,6 +140,10 @@ In that case the entry should be referencing the file journal.bib.
 Sometimes titles or the list of authors can be long.
 However **do not** put a line break in the field, as this hinders the tracking of changes that git can automatically do.
 
+For conferences that are published in a different year, put the year of publication in the ```year``` field.
+Sometimes an article becomes available online before the publication date.
+In that case, use the publication date, as indicated by the publisher.
+
 #### DOI
 
 The field ```doi``` refers only to the identifier, not the URL at doi.org
@@ -161,26 +164,29 @@ Springer has gone by many names in the past.
 We will refer to all of them as Springer, nevertheless.
 
 IEEE (Press) is not the same as IEEE Computer Society (Press).
-However, if it is not clear if a publication was published be IEEE or IEEE Computer Society, the default is the IEEE Press publisher.
+However, if it is not clear if a publication was published be IEEE or IEEE Computer Society, the default is the IEEE publisher.
 
 Ultimately, the goal of the adding the publisher is to give guidance on where to find additional information or from where to purchase a hard copy of the publication.
 
 #### Address:
 
-The field ```address``` should be always of the form ```City, Country``` (e.g. ```Berlin, Germany```, ```Cham, Switzerland```, ```Brussels, Belgium```).  
+The field ```address``` is the address of the publisher (never the location that a conference took place).
+It should be always of the form ```City, Country``` (e.g. ```Berlin, Germany```, ```Cham, Switzerland```, ```Brussels, Belgium```).  
 If the address is located in the United States, use the format ```City, State, Country```, that is ```Piscataway, NJ, USA``` or ```Cambridge, MA, USA```.
 
 #### Title:
 
 Use sentence case (capitalizing only the first letter) for ```title``` fields.
+Do not capitalize after a colon.
 Words with defined capitalization (proper names, algorithms, etc.) should be escaped using curly braces ```{}``` (e.g. ```{AutoMoDe}```).
+Algorithms that are only composed of regular words (simulated annealing, neural network) should not be protected.
 Also enclose the full name in the curly braces and not only the parts you want to protect.
 Do not use double curly braces as this will prevent the case changing algorithm from working correctly.
 Do not use style commands (e.g. \texttt or \textit) in the title.  
 Use title case (capitalizing everything but particles) for book titles.
 This affects ```title``` fields of @Book entries, ```booktitle``` fields of @InCollection and @InProceedings (and for @InProceedings especially the value in the proceedings.bib files).  
 The booktitle for proceedings (as defined in proceedings.bib) should be as written on the published proceedings.
-If the title of the proceedings does not contain a reference to the conference, you can add the abbreviated name and year of the conference (prepended by a comma, e.g. ```, ANTS2018```).
+If the title of the proceedings does not contain a reference to the conference, you can add the abbreviated name and year of the conference (prepended by a comma, e.g. ```, ANTS 2018```).
 
 The field ```editor``` should contain the names of all editors of the publication.
 In case that there are too many editors, the appearance should be controlled by the style and not by the file.
@@ -202,6 +208,7 @@ In case that there are too many editors, the appearance should be controlled by 
         annote       = {},
     }
 For the ```author``` field use the keys from author.bib. <br>
+For the ```journal``` field use the keys from journal.bib. <br>
 For the ```series``` field use the keys from series.bib. <br>
 
 #### InProceedings
@@ -221,8 +228,8 @@ For the ```series``` field use the keys from series.bib. <br>
         note         = {},
         annote       = {},
     }
-For the ```booktitle``` field, use the keys from proceedings.bib. <br>
 For the ```author``` field and ```editor``` field use the keys from author.bib. <br>
+For the ```booktitle``` field, use the keys from proceedings.bib. <br>
 For the ```series``` field use the keys from series.bib. <br>
 For the ```publisher``` field use the keys from publisher.bib. <br>
 For the ```address``` field use the keys from address.bib. <br>
@@ -245,6 +252,7 @@ For the ```address``` field use the keys from address.bib. <br>
         annote       = {},
     }
 For the ```author``` field and ```editor``` field use the keys from author.bib. <br>
+For the ```booktitle``` field, write the title here. Do not use the keys from proceedings.bib. <br>
 For the ```series``` field use the keys from series.bib. <br>
 For the ```publisher``` field use the keys from publisher.bib. <br>
 For the ```address``` field use the keys from address.bib. <br>
