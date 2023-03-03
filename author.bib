@@ -4,6 +4,7 @@
 @comment{https://nwalsh.com/tex/texhelp/bibtx-23.html}
 @comment{The key should be LastNames_INITIALS, where INITIALS are the initials of the first names.}
 @comment{Only include characters A-Z and a-z for the key. Drop or replace other characters as appropriate.}
+@comment{If two authors have the same last name and the initials of their first names are the same, include additional letters of the first names until the keys differ (ex: Wang_Zh and Wang_Zi)}
 @comment{The name should be formatted as von Lastname, Jr, Firstname (according to the bibtex standard)}
 @comment{The names should be written in UTF-8. Do not escape special characters.}
 @comment{Here are some characters that might be useful, so you can copy and paste them:}
@@ -14,8 +15,6 @@
 @comment{There is a known issue, if the first or last name starts with a non-ASCII character, the compilation for certain bibliography styles can break}
 @comment{Only in this case, escape the first letter of the first name like shown here: https://tex.stackexchange.com/a/57745}
 @comment{As an alternative you can use pybtex, a library claiming to be fully compatible with Bibtex and UTF-8}
-
-@comment{If two authors have the same last name and their first letters of their first name are the same, write in lowercase all the letters of the first name until they are different again (ex: Wang_Zh and Wang_Zi)}
 
 @string{ Aarts_E              = "Aarts, Emile" }
 @string{ Abate_M              = "Abate, Marcus" }
@@ -170,7 +169,7 @@
 
 @string{ Cagnoni_S            = "Cagnoni, Stefano" }
 @string{ Calabretta_R         = "Calabretta, Raffaele" }
-@string{ CamachoVillalon_C    = "Camacho-Villalón, Christian" }
+@string{ CamachoVillalon_C    = "Camacho Villalón, Christian Leonardo" }
 @string{ CamarinhaMatos_LM    = "Camarinha-Matos, Luis M." }
 @string{ Cambier_N            = "Cambier, Nicolas" }
 @string{ Campo_A              = "Campo, Alexandre" }
@@ -223,6 +222,7 @@
 @string{ Cobb_GW              = "Cobb, George W." }
 @string{ CoelloCoello_CA      = "Coello Coello, Carlos A." }
 @string{ Cohen_M              = "Cohen, Myra" }
+@string{ Cohn_A               = "Cohn, Anthony" }
 @string{ Colledanchise_M      = "Colledanchise, Michele" }
 @string{ Collet_P             = "Collet, Pierre" }
 @string{ Collobert_R          = "Collobert, Ronan" }
@@ -412,7 +412,7 @@
 @string{ Genter_K             = "Genter, Katie" }
 @string{ Gerkey_B             = "Gerkey, Brian" }
 @string{ Geurts_P             = "Geurts, Pierre" }
-@string{ GhalamzanE_AM        = "Ghalamzan E., Amir M." }
+@string{ GhalamzanE_AM        = "Ghalamzan Esfahani, Amir Masoud" }
 @string{ Gharbi_I             = "Gharbi, Ilyes" }
 @string{ Ghosh_R              = "Ghosh, Ritwika" }
 @string{ Giannaccini_ME       = "Giannaccini, Maria Elena" }
